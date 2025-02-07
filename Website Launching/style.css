@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.webname{
+    color: #fff;
+    font-size: 24px;
+    padding-left: 200px;
+    background-color: none;
+    /* position: relative;
+    z-index: 1; */
+    font-weight: 700;
+}
+video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+    position: absolute;
+    top:0;
+    filter: brightness(0.3);
+    z-index: 0;
+}
+.counter{
+    width: 40px;
+    /* position: relative;
+    z-index: 1; */
+    /* border: 2px solid red; */
+    margin-left: 200px;
+}
+.counters{
+    display: flex;
+    margin-top: 200px;
+    /* border: 2px solid red; */
+    /* position: relative;
+    z-index: 1; */
+    width: fit-content;
+}
+h3, h1{
+    /* position: relative;
+    z-index: 1; */
+    left: 150px;
+    top: 150px;
+    margin-top: 20px;
+}
+strong{
+    text-decoration: underline;
+    text-decoration-color: orangered;
+    color: orangered;
+}
+.counter:nth-child(2),:nth-child(3),:nth-child(4)
+{
+    margin-left: 50px;
+}
+p:nth-child(1){
+    font-size: 50px;
+    font-weight: 600;
+}
+button{
+    /* position: relative;
+    z-index: 1; */
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    height: 40px;
+    width: 120px;
+    left:-3%;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: darkorange;
+}
+body::-webkit-scrollbar{
+    display: none;
+    scroll-behavior: none;
+}
+img{
+    z-index: 2; 
+    height: 150px;
+    margin-left: 700px;
+    filter: drop-shadow(1px 1px 1px 1px lightgrey),contrast(0.2);
+    margin-top:-150px;
+    animation: launch 2s  ease-in-out infinite;
+}
+@keyframes launch {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-350%);
+        opacity: 0;
+    }
+}
+.colon{
+    font-weight: 600;
+    top: -90px;
+    font-size: xx-large;
+    display: inline-block;
+    left: 12%;
+    margin-left: 70px;
+}
