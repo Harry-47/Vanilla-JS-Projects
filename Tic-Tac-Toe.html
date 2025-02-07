@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 30%;
+            height: 350px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 10px;
+            margin: auto;
+            margin-top: 50px;
+            justify-content: center;
+            align-items: left;
+            background-color: black;
+        }
+        .box {
+            height: 25%;
+            width: 25%;
+            background-color: lightgray;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        #newgame {
+            margin-top: 25px;
+            background-color:red;
+            color: aliceblue;
+            margin-left: 570px;
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+        }
+        #rst {
+            margin-top: 15px;
+            background-color: red;
+            color: aliceblue;
+            height: 40px;
+            border-radius: 10px;
+            margin-left: 570px;
+            width: 100px;
+        }
+        .message {
+            font-size: 20px;
+            color: cyan;
+            width: 400px;
+            margin-top: 5px;
+            margin-left: 33%;
+            font-weight: bold;
+            display: none;
+            justify-content: left;
+            align-items: left;
+            text-align: center;
+        }
+        .x {
+            color: darkred;
+        }
+        .o {
+            color: green;
+        }
+    </style>
+</head>
+<body bgcolor="black">
+    <div class="message">
+        Congratulations! You Won
+    </div>
+    <button id="newgame">New Game</button>
+
+    <div class="container">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+    </div>
+
+    <button id="rst">Reset</button>
+    <script>
+        let boxes = document.querySelectorAll(".box");
+        let rst = document.querySelector("#rst");
+        let newgame = document.querySelector("#newgame");
+
+        let Circle = true;
+        let patterns = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8],[2, 4, 6]];
+        let count = 0;
+
+        function checkWin() {
+            for (let pattern of patterns) {
+                if (boxes[pattern[0]].innerText === boxes[pattern[1]].innerText && boxes[pattern[1]].innerText === boxes[pattern[2]].innerText && boxes[pattern[0]].innerText !== "") {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // function to start a new game
+        newgame.addEventListener("click", () => {
+            boxes.forEach((box) => {
+                box.innerText = "";
+                box.classList.remove("x", "o");
+                box.disabled = false;
+                count = 0;
+            });
+            document.querySelector(".message").style.display = "none";
+        });
+
+        // function to reset the tic tac toe board
+        rst.addEventListener("click", () => {
+            boxes.forEach((box) => {
+                box.innerText = "";
+                box.classList.remove("x", "o");
+                box.disabled = false;
+                count = 0;
+            });
+            document.querySelector(".message").style.display = "none";
+        });
+
+        // function to handle the game logic and win conditions
+        boxes.forEach((box) => {
+            box.addEventListener("click", () => {
+                if (box.innerText === "") {
+                    if (Circle) {
+                        box.innerText = "O";
+                        box.classList.add("o");
+                        Circle = false;
+                    } else {
+                        box.innerText = "X";
+                        box.classList.add("x");
+                        Circle = true;
+                    }
+                    count++;
+
+                    if (checkWin()) {
+                        document.querySelector(".message").innerText = `Congratulations! Player ${Circle ? "X" : "O"} Won`;
+                        document.querySelector(".message").style.display = "block";
+                        boxes.forEach((box) => {
+                            box.disabled = true;
+                        });
+                    } else if (count === 9) {
+                        document.querySelector(".message").innerText = "It's a Draw";
+                        document.querySelector(".message").style.display = "block";
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
