@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(-45deg, rgb(134, 0, 134), rgb(0, 18, 134));
+}
+
+.calender {
+    width: 30vw;
+    height: 40vh;
+    margin-top: 150px;
+    margin-left: 550px;
+    display: flex;
+    border-radius: 10px;
+}
+
+.dnd, .mny {
+    width: 70%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.dnd {
+    color: black;
+    background-color: rgb(214, 232, 248);
+}
+
+.mny {
+    width: 50%;
+    color: white;
+    background-color: rgb(255, 51, 0);
+}
+
+/* Sibling hover effects */
+.mny:hover + .dnd {
+    width: 60%;
+    background-color: rgb(255, 51, 0) !important;
+    color: white !important;
+}
+
+.dnd:hover + .mny {
+    width: 70%;
+    background-color: rgb(214, 232, 248) !important;
+    color: black !important;
+}
+
+/* Individual hover effects */
+.dnd:hover {
+    width: 60%;
+    color: white;
+    background-color: rgb(255, 51, 0);
+}
+
+.mny:hover {
+    width: 70%;
+    color: black;
+    background-color: rgb(214, 232, 248);
+}
+
+.date {
+    font-weight: 700;
+    font-size: 100px;
+}
+
+.day {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.month, .year {
+    font-weight: 700;
+    font-size: 30px;
+}

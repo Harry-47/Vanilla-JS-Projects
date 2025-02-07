@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-circle {
+    transform: rotate(-90deg);
+}
+
+.outer-circle {
+    stroke: #e6e6e6;
+    fill: none;
+}
+
+.progress {
+    stroke-dasharray: 565.48; /* Circumference of the circle: 2 * Math.PI * radius */
+    stroke-dashoffset: 565.48; /* Initially hides the stroke */
+    transition: stroke-dashoffset 0.1s linear;
+}
+
+.percentage {
+    position: absolute;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}

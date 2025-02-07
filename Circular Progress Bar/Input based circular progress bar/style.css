@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-circle {
+    transform: rotate(-90deg);
+}
+
+.outer-circle {
+    stroke: #e6e6e6;
+    fill: none;
+}
+
+.progress {
+    stroke-dasharray: 565.48; /* Circumference of the circle: 2 * Math.PI * radius */
+    stroke-dashoffset: 565.48; /* Initially hides the stroke */
+    transition: stroke-dashoffset 2s linear;
+}
+
+.percentage {
+    position: absolute;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    top:35%;
+}
+
+.input-container {
+    margin-top: 20px;
+}
+
+input[type="number"], input[type="number"]:hover{
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+    width: 75px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, black, rgba(0, 0, 0, 0.863)) ;
+
+}
+input{
+    margin-top: 310px;
+    margin-left: 650px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid white;
+    outline: none;
+}
+.strong-password{
+   color: rgb(0, 186, 0);
+   border: 1px solid rgb(0, 186, 0);
+}
+.normal-password{
+    color: yellow;
+    border: 1px solid yellow;
+}
+.weak-password{
+    color: red;
+    border: 1px solid red;
+}
+p{
+    margin-left: 650px;
+    margin-top: 10px;
+    display: none;
+}
+.strong-suggestion{
+   color: rgb(0, 183, 0);
+}
+.normal-suggestion {
+   
+    color:yellow;
+}
+.weak-suggestion {
+    
+    color: red;
+}

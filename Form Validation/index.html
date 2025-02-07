@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form">
+        <form action="submit">
+            <img src="icons8-paper-plane-64.png" alt="">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" oninput = "checkName()"required>
+            <p id="nameMessage">Please write your full name</p>
+            <br><br>
+
+            <label for="phone">Phone No.</label>
+            <input type="text" id="phone" name="phone"  oninput="checkPhone()" required>
+            <p class="phoneMessage">Invalid Phone No.!</p>
+            <br><br>
+
+            <label for="email">Email ID</label>
+            <input required type="email" id="email" name="email" >
+            <br><br>
+
+            <label for="message">Your Message</label>
+            <textarea name="message" id="message" rows="5" cols="33" onfocus="checkMessage()" oninput="checkMessage()" onblur="revertChanges()" ="Minimum Length is 30 Characters"></textarea>
+            <div class="remaining-chars"></div>
+            <p class="submitMessage">Please Fill The Form Correctly</p>
+            <button type="button" onclick="checkSubmit()">Submit</button>
+        </form>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: wheat;
+}
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("pexels-kaip-597909.jpg");
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    width: 370px;
+    text-transform: capitalize;
+    margin-top: 30px;
+}
+h4{
+    margin-top: 30px;
+}
+.container{
+    width: fit-content;
+    margin-top: 200px;
+    margin-left: 200px;
+    height: 300px;
+}
+input{
+  width: 360px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: black;
+}
+input::selection{
+    outline: none;
+}
+img{
+    background-color: lightblue;
+    height: 33px;
+    margin-left: -39px;
+    position: relative;
+    top: 13px;
+}
+p{
+    margin-top: 10px;
+    color: rgb(5, 206, 5);
+    display: none;
+}

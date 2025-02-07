@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+input{
+    margin: 10px 0;
+    color: #000;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+}
+.password{
+    width: 300px;
+    margin-top: 300px;
+    margin-left: 650px;
+    position: relative;
+}
+img{
+    position: absolute;
+    height: 25px;
+    left: 159px;
+    top: 12px;
+}

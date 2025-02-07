@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="productImage">
+        <img src="shirt1.png" alt="">
+        <div class="choices">
+            <input type="radio" name="1" id="firstImage">
+            <input type="radio" name="1" id="secondImage">
+            <input type="radio" name="1" id="thirdImage">
+        </div>
+
+    </div>
+
+    <div class="productDetails">
+        <h1>Casual T shirt</h1>
+        <h3>$15.00</h3>
+        <h4>30% OFF</h4>
+        <p class="details">The Northface is an American manufacturer of jeans and other clothing items, particularly workwear</p>
+        <br>
+        <div class="sizes">
+            <span>Size</span>
+            <div class="values">
+            <p>S</p>
+            <p>M</p>
+            <p>L</p>
+            <p>XL</p>
+            <p>XXL</p>
+            </div>
+            
+        </div>
+        <div class="colors">
+            <span>Color</span>
+            <span>
+                <label class="custom-radio">
+                    <input type="radio" name="radio-group">
+                    <span class="radiomark blue"></span>
+                </label>
+                
+                <label class="custom-radio">
+                    <input type="radio" name="radio-group">
+                    <span class="radiomark green"></span>
+                </label>
+                
+                <label class="custom-radio">
+                    <input type="radio" name="radio-group">
+                    <span class="radiomark yellow"></span>
+                </label>
+                
+                <label class="custom-radio">
+                    <input type="radio" name="radio-group">
+                    <span class="radiomark red"></span>
+                </label>
+                
+                
+            </span>
+        </div>
+        <div class="quantity">
+            <span>Quantity</span>
+            <span><input type="number" min="0" max="100"></span>
+        </div>
+        
+    </div>
+    
+    <script src="logic.js"></script>
+</body>
+</html>

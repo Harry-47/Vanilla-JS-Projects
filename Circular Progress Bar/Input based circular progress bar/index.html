@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Progress Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <svg class="progress-circle" width="200" height="200">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="50%" style="stop-color: rgb(255, 0, 0); stop-opacity: 1" />
+                    <stop offset="100%" style="stop-color: rgb(199, 0, 156); stop-opacity: 1" />
+                </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="90" stroke-width="15" class="outer-circle"/>
+            <circle cx="100" cy="100" r="90" stroke="url(#gradient)" stroke-width="18" fill="none" class="progress" />
+        </svg>
+        <div class="percentage">0%</div>
+        <div class="input-container">
+            <input type="number" id="percentageInput" min="0" max="100" placeholder="Enter %" />
+            <button id="updateButton">Update Progress</button>
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>

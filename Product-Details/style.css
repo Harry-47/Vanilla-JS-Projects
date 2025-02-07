@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    width: fit-content;
+}
+body{
+    background: linear-gradient(to right, lightblue, aliceblue);
+    position: relative;
+}    
+.productImage{
+    height: 500px;
+    width: 400px;
+    margin-top: 150px;
+    margin-left: 500px;
+    padding-top: 70px;
+    padding-left: 10px;
+    object-fit: cover;
+    background-color: rgb(0, 0, 0);
+}
+.fixed{
+    padding-top: 135px;
+    padding-left: 70px;
+}
+.choices{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 90%;   
+    margin-top: -70px;}
+.productDetails{
+    background-color: aliceblue;
+    box-shadow:  2px 8px 10px #aa95957f;
+    width: 320px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    padding-left: 20px;
+    position: absolute;
+    top:10%;
+    left: 100%;
+    z-index: 2;
+   
+}
+.productDetails >*{
+    margin-top: 15px;
+}
+h4{
+    color: rgb(0, 255, 0);
+}
+.details{
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: smaller;
+}
+.sizes{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+.values{
+    display: flex;
+    margin-left: 16px;
+}
+.values > p{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.onclick{
+color: blue;
+}
+.sizes > span{
+    margin-right: 10px;
+}
+.colors{
+    margin-top: 10px;
+}
+/* Hide the default radio button */
+.custom-radio input[type="radio"] {
+    display: none;
+}
+
+/* Create a custom radio button */
+.custom-radio .radiomark {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%; /* Circular shape */
+    display: inline-block;
+}
+
+/* Different colors for each radio button */
+.radiomark.blue {
+    background-color: blue;
+}
+
+.radiomark.green {
+    background-color: green;
+}
+
+.radiomark.yellow {
+    background-color: yellow;
+}
+
+.radiomark.red {
+    background-color: red;
+}
+
+/* Style the radio button when checked */
+.custom-radio input[type="radio"]:checked + .radiomark::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+}
+label{
+    cursor: pointer;
+    padding-left: 10px;
+}
+.quantity{
+    margin-top: 10px;
+}
+input[type="number"]{
+    width: 40px;
+    margin-left: 10px;
+}

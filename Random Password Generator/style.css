@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: repeating-linear-gradient(45deg, black, black 10px, green 10px, green 20px);
+}
+
+.card {
+    background-color: #f0f8ff; /* Alice Blue color */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: green;
+    text-decoration: underline;
+    text-decoration-color: green;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    border: 1px solid rgb(205, 218, 205);
+    padding:5px;
+    width: 240px;
+    font-size: 16px;
+    margin-left: 15px;
+    color: #333;
+    border-radius: 14px;
+
+}
+
+input[type="text"]:disabled {
+    background-color: #ffffff;
+    color: #333;
+}
+input[type="number"]{
+    border: 2px solid lightgreen;
+    padding:5px;
+    width: 30px;
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 14px;
+}
+
+.copy-btn {
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-btn svg {
+    fill: green;
+    width: 24px;
+    height: 24px;
+}
+
+.copy-btn:hover svg {
+    fill: darkgreen;
+}
+
+.generate-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width inside the card */
+}
+.numbers{
+    margin-right: 67px;
+}
+.symbols{
+    margin-left: 4px;
+}
+.generate-btn svg {
+    margin-right: 8px;
+}
+
+.generate-btn:hover {
+    background-color: darkgreen;
+}
